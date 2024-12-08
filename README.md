@@ -1,5 +1,4 @@
-I'm building a social recipe-sharing app to get comfortable with writing RESTful APIs in Python. It will feature image handling, user auth, and search functionality.
-
+I'm building a social recipe-sharing app I'm building to get comfortable writing RESTful APIs in Python. I
 PHASE 1 (Core Foundation):
 
 User basics: registration, auth, profiles
