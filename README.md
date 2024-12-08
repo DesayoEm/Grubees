@@ -1,4 +1,4 @@
-I'm building a social recipe-sharing app I'm building to get comfortable writing RESTful APIs in Python. <br><br><br>
+I'm building a social recipe-sharing app I'm building to get comfortable writing RESTful APIs in Python. <br><br>
 PHASE 1 (Core Foundation):<br>
 User basics: registration, auth, profiles
 Basic post CRUD
