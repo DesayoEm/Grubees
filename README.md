@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Recipe Social Platform</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,7 +41,7 @@
     </style>
 </head>
 <body>
-    <h1>Recipe Social Platform</h1>
+    <h1>Grubees</h1>
     <p>A phased development plan for a social recipe-sharing application built with Python RESTful APIs.</p>
 
     <div class="phase-section">
