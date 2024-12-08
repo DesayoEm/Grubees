@@ -3,7 +3,7 @@
     <h1>Grubees</h1>
     <p>A phased development plan for a social recipe-sharing application built with Python RESTful APIs.</p>
 
-    <h1>Phase 1:User registration and authentication system </h1>
+    <b>Phase 1:User registration and authentication system</b> <br>
     Profile management functionality<br>
     Basic post creation, reading, updating, and deletion (CRUD)<br>
     Single image upload per post
