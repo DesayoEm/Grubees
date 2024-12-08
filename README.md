@@ -11,6 +11,9 @@ Basic social: likes, comments, viewing public posts
 Public/private post controls
 
 
+
+
+
 Phase 2 (Enhanced Platform):
 
 Multiple images per post
@@ -24,6 +27,10 @@ Activity feed
 Better commenting (replies, editing)
 Basic analytics dashboard
 Admin Portal
+
+
+
+
 
 Phase 3 (ML Integration):
 
