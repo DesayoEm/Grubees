@@ -4,14 +4,17 @@ Table users {
   full_name VARCHAR (50)
   bio VARCHAR (400)
   avatar VARCHAR (200)
+  country Enum[]
   phone VARCHAR(25)
   email_address VARCHAR (255)
   password VARCHAR(15)
   date_of_birth DATE
+  gender Enum[]
   created_at TIMESTAMP
   last_updated TIMESTAMP
   is_active BOOL
   is_verified BOOL
+  is_public BOOL
 }
 
 Table posts {
