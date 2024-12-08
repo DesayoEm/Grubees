@@ -1,0 +1,110 @@
+Table users {
+  id SERIAL [pk, increment]
+  username VARCHAR(20)
+  full_name VARCHAR (50)
+  bio VARCHAR (400)
+  avatar VARCHAR (200)
+  phone VARCHAR(25)
+  email_address VARCHAR (255)
+  password VARCHAR(15)
+  date_of_birth DATE
+  created_at TIMESTAMP
+  last_updated TIMESTAMP
+  is_active BOOL
+  is_verified BOOL
+}
+
+Table posts {
+  id SERIAL [pk, increment]
+  title VARCHAR(60)
+  description VARCHAR (500)
+  ingredients_list VARCHAR (500)
+  instructions VARCHAR (1500)
+  media_url TEXT[]
+  cooking_time INT
+  category VARCHAR (20)
+  cuisine VARCHAR (20)
+  servings INT
+  calories_per_serving INT
+  hashtags TEXT[]
+  lat real
+  lng real
+  created_at TIMESTAMP
+  last_updated TIMESTAMP
+  is_public BOOL
+  author_id INTEGER [ref: > users.id]
+}
+
+Table hashtags {
+  id SERIAL [pk, increment]
+  title VARCHAR(20)
+  created_at TIMESTAMP
+}
+
+Table hashtag_posts {
+  id SERIAL [pk, increment]
+  hashtag_id INTEGER [ref: > hashtags.id]
+  post_id INTEGER [ref: > posts.id]
+}
+
+Table reactions {
+  id SERIAL [pk, increment]
+  created_at timestamp
+  type Enum []
+  user_id INTEGER [ref: > users.id]
+  post_id INTEGER [ref: > posts.id]
+}
+
+Table mentions {
+  id SERIAL [pk, increment]
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+  contents VARCHAR(240)
+  user_id INTEGER [ref: > users.id]
+  post_id INTEGER [ref: > posts.id]
+}
+
+Table comments {
+  id SERIAL [pk, increment]
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+  contents VARCHAR(240)
+  user_id INTEGER [ref: > users.id]
+  post_id INTEGER [ref: > posts.id]
+}
+
+Table comment_likes {
+  id SERIAL [pk, increment]
+  liked_at timestamp
+  user_id INTEGER [ref: > users.id]
+  comment_id INTEGER [ref: > comments.id]
+}
+
+
+Table shares {
+  id SERIAL [pk, increment]
+  shared_at TIMESTAMP
+  quote VARCHAR(240)
+  user_id INTEGER [ref: > users.id]
+  post_id INTEGER [ref: > posts.id]
+}
+
+Table saves {
+  id SERIAL [pk, increment]
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+  tag VARCHAR(240)
+  user_id INTEGER [ref: > users.id]
+  post_id INTEGER [ref: > posts.id]
+}
+
+Table followers {
+  id SERIAL [pk, increment]
+  user_id INTEGER [ref: > users.id]
+  follower_id INTEGER [ref: > users.id]
+
+
+  }
+
+
+

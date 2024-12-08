@@ -1,0 +1,38 @@
+User Management:
+
+POST /auth/register
+POST /auth/login
+GET /auth/verify-email
+GET /user/profile
+PUT /user/profile
+GET /users/{id}/profile (to get profile info + posts)
+PUT /users/profile (to update bio and profile pic)
+GET /users/{id}/posts (to fetch user's posts, probably with pagination)
+
+
+
+post Core Features:
+
+POST /posts (create)
+GET /posts (list public posts)
+GET /posts/{id} (get single post)
+PUT /posts/{id} (update)
+DELETE /posts/{id}
+GET /posts/search
+GET /categories
+PUT /posts/{id}/visibility
+So you could have a post_type field in your database that could be:
+
+post
+tip
+review
+question
+etc.
+Basic Social Features:
+
+POST /posts/{id}/like
+DELETE /posts/{id}/like
+POST /posts/{id}/comments
+GET /posts/{id}/comments
+GET /users/{id}/public-posts
+GET /users/{id}/profile
