@@ -1,18 +1,13 @@
 from sqlalchemy import String, Boolean, Date, DateTime, Enum
 from sqlalchemy.dialects.postgresql import UUID
 from uuid import uuid4
-from V1.schemas.posts import Posts
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
-from sqlalchemy.orm import DeclarativeBase
 from V1.schemas.user_enums import GenderEnum, CountryEnum
 from datetime import datetime, UTC, date
 from typing import List, Optional
-
-
-class Base(DeclarativeBase):
-    pass
+from .base import Base
 
 class User(Base):
     __tablename__ = 'users'
@@ -28,9 +23,9 @@ class User(Base):
     date_of_birth: Mapped[date] = mapped_column (Date, nullable = False)
     bio: Mapped[Optional[str]] = mapped_column(String(300))
     avatar: Mapped[Optional[str]] = mapped_column(String(255))
-    gender: Mapped[Optional[GenderEnum]] = mapped_column(String(15))
-    phone: Mapped[Optional[str]] = mapped_column(Enum(GenderEnum))
-    country: Mapped[Optional[CountryEnum]] = mapped_column(Enum(CountryEnum), nullable = True)
+    gender: Mapped[Optional[GenderEnum]] = mapped_column(Enum(GenderEnum, native_enum = True))
+    phone: Mapped[Optional[str]] = mapped_column(String(15))
+    country: Mapped[Optional[CountryEnum]] = mapped_column(Enum(CountryEnum, native_enum= True))
 
     #Status flags
     is_active: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
@@ -51,7 +46,7 @@ class User(Base):
     )
 
     #relationships
-    posts: Mapped[List["Posts"]] = relationship(
+    posts: Mapped[List["Post"]] = relationship(
         back_populates="user",
         cascade="all, delete-orphan"
     )
@@ -60,7 +55,6 @@ class User(Base):
 
 
 # print(Base.metadata.tables)
-
 
 # __table_args__ = (
 #     Index('ix_users_email_address', 'email_address'),

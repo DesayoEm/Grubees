@@ -2,7 +2,7 @@ from enum import Enum
 class GenderEnum(str, Enum):
     Male= 'M'
     Female = 'F'
-    PREFER_NOT_TO_SAY = "Prefer not to say"
+    PREFER_NOT_TO_SAY = "P"
 
 
 class CountryEnum(str, Enum):

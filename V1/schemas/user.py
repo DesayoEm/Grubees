@@ -3,7 +3,7 @@ from .user_enums import CountryEnum, GenderEnum
 from uuid import UUID
 from datetime import datetime,date
 from starlette.authentication import BaseUser
-# from .posts import Posts
+
 
 class Login(BaseModel):
     input_value: str
@@ -40,7 +40,7 @@ class UserInfo(BaseUser):
     is_active:bool = False
     is_verified:bool = False
     is_public:bool = True
-    posts: Posts
+    # post: Post
 
 class ProfileUpdate(UserProfile):
     pass

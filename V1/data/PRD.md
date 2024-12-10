@@ -1,14 +1,14 @@
-# Recipe Social Platform - Updated Product Requirements Document
+#Food sharing Social Platform - Updated Product Requirements Document
 
 ## 1. Product Overview
 
 ### 1.1 Problem Statement
-Food enthusiasts need a fully social platform to share recipes, connect with other cooks, and build a cooking community. Current platforms either lack robust social features or are too focused on recipe storage alone.
+Food enthusiasts need a fully social platform to share posts, connect with other cooks, and build a cooking community. Current platforms either lack robust social features or are too focused on post storage alone.
 
 ### 1.2 Target Users
 - Home cooks
 - Food bloggers 
-- Recipe creators
+- post creators
 - Cooking enthusiasts
 - Social foodies
 
@@ -27,26 +27,26 @@ Food enthusiasts need a fully social platform to share recipes, connect with oth
 - Password security and hashing
 - Email verification
 
-#### Recipe Core Features
-- Basic recipe CRUD operations
-- Single image upload per recipe
+#### post Core Features
+- Basic post CRUD operations
+- Single image upload per post
 - Basic text search by name
 - Simple categorization
-- Recipe visibility control (public/private)
+- post visibility control (public/private)
 
 #### Basic Social Features
-- Like/unlike recipes
+- Like/unlike posts
 - Basic commenting
-- View other users' public recipes
+- View other users' public posts
 - Basic user profiles
 
 ### Phase 2: Enhanced Platform
-#### Advanced Recipe Features
+#### Advanced post Features
 - Multiple image support
 - Advanced search functionality
 - Tags and hashtags system
-- Recipe collections/saves
-- Recipe sharing
+- post collections/saves
+- post sharing
 
 #### Social Enhancements
 - Direct messaging system
@@ -58,14 +58,14 @@ Food enthusiasts need a fully social platform to share recipes, connect with oth
 #### Platform Intelligence
 - Content quality scoring
 - User engagement metrics
-- Trending recipes algorithm
+- Trending posts algorithm
 - Search result ranking
 - Basic analytics dashboard
 - Admin portal
 
 ### Phase 3: Machine Learning Integration
 #### Smart Features
-- Recipe recommendations
+- post recommendations
 - Content similarity detection
 - User preference learning
 - Image recognition for food photos
@@ -112,7 +112,7 @@ Food enthusiasts need a fully social platform to share recipes, connect with oth
 ## 4. Success Metrics
 ### Phase 1 Metrics
 - User registration rate
-- Recipe creation rate
+- post creation rate
 - Basic engagement metrics (likes, comments)
 - Search usage metrics
 
