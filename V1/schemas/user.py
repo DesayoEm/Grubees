@@ -1,23 +1,14 @@
 from pydantic import BaseModel,EmailStr, field_validator
-from user_enums import CountryEnum, GenderEnum
+from .user_enums import CountryEnum, GenderEnum
 from uuid import UUID
 from datetime import datetime,date
 from starlette.authentication import BaseUser
-from schemas.posts import Posts
+# from .posts import Posts
 
 class Login(BaseModel):
     input_value: str
     password:str
 
-# @validator('phone_number')
-# def validate_phone(cls, value):
-#     # Remove any spaces or dashes
-#     num = ''.join(filter(str.isdigit, value))
-#     if not num.isdigit():
-#         raise ValueError('Phone number must contain only digits')
-#     if not 10 <= len(num) <= 15:  # Common lengths for phone numbers globally
-#         raise ValueError('Invalid phone number length')
-#     return num
 class NewUser(BaseModel):
     id:UUID
     username:str
@@ -49,6 +40,7 @@ class UserInfo(BaseUser):
     is_active:bool = False
     is_verified:bool = False
     is_public:bool = True
+    posts: Posts
 
 class ProfileUpdate(UserProfile):
     pass
@@ -60,7 +52,6 @@ class PasswordChange(BaseModel):
     current_password: str
     new_password: str
     confirm_password: str
-
 
 #
 # @validator('phone_number')

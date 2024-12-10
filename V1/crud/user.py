@@ -1,4 +1,30 @@
-from schemas.user import Login, NewUser, UserProfile, UserAccount,\
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from models.user import Base, User
+from conn import engine
+
+Base.metadata.create_all(bind=engine)
+
+
+
+current_file = os.path.abspath(__file__)
+print(f"Current file location: {current_file}")
+
+
+current_dir = os.path.dirname(current_file)
+print(f"Current directory: {current_dir}")
+
+print(sys.path)
+try:
+    print("\nAttempting to import models.user...")
+    from models.user import Base, User
+    print("import successful")
+except ImportError as e:
+    print(f"import failed with error: {str(e)}")
+
+    from schemas.user import Login, NewUser, UserProfile, UserAccount,\
     UserInfo, AccountUpdate,ProfileUpdate
 from uuid import UUID
 
