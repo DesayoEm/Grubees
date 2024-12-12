@@ -7,7 +7,7 @@
     Profile management functionality
     Basic post creation, reading, updating, and deletion (CRUD)
     Single image upload per post
-    Basic text search by recipe name
+    Basic text search by username and post title
     Simple post categorization
     Like and comment functionality
     Public/private post visibility controls
